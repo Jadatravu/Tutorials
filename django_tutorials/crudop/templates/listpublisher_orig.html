@@ -1,0 +1,11 @@
+<html>
+<head>
+</head>
+<body>
+<center><table summary="Publisher list." border="1">
+{% for pub in pub_list %}
+    <tr><td>Name :</td><td>{{ pub.name }}</td></tr>
+{% endfor %}
+ </table></center>
+</body>
+</html>

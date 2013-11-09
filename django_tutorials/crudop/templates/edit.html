@@ -1,0 +1,13 @@
+<html>
+<head>
+</head>
+<body>
+<form action="/edit_save_op/" method="post">{% csrf_token %}
+    	<center><table >
+            <tr><td>Name :</td><td><input type="hidden" name=name_{{pkey}} value = display_{{pkey}}><input name="username" type="text" value= {{ pname }}></td></tr>
+            </td></tr>
+            <tr><td>&nbsp;</td><td><input type="submit" value="Save"></td></tr>
+        </table></center>
+    </form>
+</body>
+</html>
