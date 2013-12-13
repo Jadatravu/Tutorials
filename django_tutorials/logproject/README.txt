@@ -1,4 +1,3 @@
-   ************      Django Logger application tutorial ***********
 1.Update LOGGING section in settings.py with logger,handler,formatter fields
   Logger which specifies the handler, in this case it is file
  'loggers': {
@@ -28,3 +27,4 @@
     logger.error("This is error message")
 
 3. log messages will be printed in the log file in this case "logapp.log"
+   http://127.0.0.1:8000/logproject/
