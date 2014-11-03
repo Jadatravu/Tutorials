@@ -1,0 +1,14 @@
+cat mail_content.html | mutt -s "Klockworks Report" surya.rao@polycom.com -e "set content_type=text/html" -a Existing_critical.html -a Existing_Error.html -a   New_Error_Critical.html -a Existing_Warning.html  -a New_warnings.html
+
+user@ubuntuvm:~/klocworks$ cat mail_content.html | mutt -s "Klockworks Report" surya.rao@polycom.com -e "set content_type=text/html" -a Existing_critical.html -a Existing_Error.html -a   New_Error_Critical.html -a Existing_Warning.html  -a New_warnings.html -a sample.png
+
+user@ubuntuvm:~/klocworks$ cat mail_content.html | mutt -s "Klockworks Report" surya.rao@polycom.com -c satish.obulasetti@polycom.com -e "set content_type=text/html" -a Existing_critical.html -a Existing_Error.html -a   New_Error_Critical.html -a Existing_Warning.html  -a New_warnings.html -a trend_graph.png
+
+import jenkinsapi
+>>> import jenkinsapi
+>>> from jenkinsapi.jenkins import Jenkins
+J=Jenkins('http://10.221.52.6:8080',"Srikanth","password")
+>>> for job in J.get_jobs():
+...    print job
+>>> J.build_job('test_project_env1', {'Branch': 'test value 1', 'Tag': 'test value 2','BuildID':"456"})
+

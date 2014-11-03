@@ -1,0 +1,334 @@
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+DEBUG new111
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form1
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form1
+DEBUG 3
+DEBUG old_pic1 tmp/django_cFZJySR.txt
+DEBUG edited contact saving
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG new111
+DEBUG firstname2
+DEBUG firstname2
+DEBUG contacts len 1
+DEBUG firstname2
+DEBUG contacts len 1
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+DEBUG contacts len 0
+DEBUG new111
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG test2 first_name edited 23
+DEBUG deleted contact
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG test2 first_name edited 23
+DEBUG deleted contact
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG test2 first_name edited 2
+DEBUG deleted contact
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG test2 first_name edited
+DEBUG deleted contact
+DEBUG firstname2
+DEBUG contacts len 1
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG test2 first_name edited7
+DEBUG deleted contact
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG test2 first_name
+DEBUG deleted contact
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG test first name1
+DEBUG deleted contact
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG test first name
+DEBUG deleted contact
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG firstname2
+DEBUG deleted contact
+DEBUG contacts len 0
+DEBUG deleting contact
+DEBUG firstname1
+DEBUG deleted contact
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR request user  is authenticated
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user  is authenticated
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user suser1 is authenticated
+ERROR request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+ERROR error message use rname suser1
+DEBUG debug message use rname suser1
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname suser3
+DEBUG debug message use rname suser3
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user suser3 is authenticated
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG request user suser3 is authenticated
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG request user suser3 is authenticated
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG this is edit contact form
+DEBUG request user suser3 is authenticated
+DEBUG this is edit contact form
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG contact form1
+DEBUG contact form1
+DEBUG True
+DEBUG contact form2
+DEBUG 0
+DEBUG old_pic1 0
+DEBUG new contact saving
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG this is edit contact form
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG this is edit contact form
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG contact form1
+DEBUG contact form1
+DEBUG True
+DEBUG contact form2
+DEBUG 13
+DEBUG old_pic1 
+DEBUG edited contact saving
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG this is edit contact form
+DEBUG first_name1
+DEBUG contacts len 1
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+DEBUG request user suser1 is authenticated
+ERROR error message use rname 
+DEBUG debug message use rname 
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG request user suser3 is authenticated
+DEBUG debug request user suser3 is authenticated
+ERROR error request user suser3 is authenticated
+DEBUG contact form
+ERROR error message use rname 
+DEBUG debug message use rname 
+ERROR request user  is authenticated
+DEBUG request user  is authenticated
+DEBUG request user  is authenticated
+DEBUG request user  is authenticated
+DEBUG request user  is authenticated
+DEBUG request user  is authenticated
+ERROR error message use rname 
+DEBUG debug message use rname 

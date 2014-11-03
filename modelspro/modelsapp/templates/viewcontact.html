@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>View Contact</title>   
+    </head>
+    <body>
+    <!-- List of uploaded documents -->
+    {% if document %}
+        <ul>
+        <table>
+        <tr><td>First Name </td><td>{{document.first_name}}<td></tr>
+        <tr><td>Last Name </td><td>{{document.last_name}}<td></tr>
+        <tr><td>SurName </td><td>{{document.sur_name}}<td></tr>
+        <tr><td>Email </td><td>{{document.email}}<td></tr>
+        <tr><td>Employee ID </td><td>{{document.emp_id}}<td></tr>
+        <tr><td>Supervisor ID </td><td> <a href="/Contacts/viewcontact/{{document.supervisor.sup_id}}">{{document.supervisor.sup_id}}</a><td></tr>
+        <tr><td>Department ID </td><td>{{document.department.dep_name}}<td></tr>
+        <tr><td>Job Title </td><td>{{document.job_title.title}}<td></tr>
+        <tr><td>Phone </td><td>{{document.phone}}<td></tr>
+        <tr><td>Address </td><td><td></tr>
+        <tr><td>House No </td><td>{{document.address.H_No}}<td></tr>
+        <tr><td>Lane </td><td>{{document.address.Line1}}<td></tr>
+        <tr><td>Street </td><td>{{document.address.street}}<td></tr>
+        <tr><td>Colony </td><td>{{document.address.colony}}<td></tr>
+        <tr><td>City </td><td>{{document.address.city}}<td></tr>
+        <tr><td>Pin </td><td>{{document.address.pin}}<td></tr>
+        </table>
+        </ul>
+    {% else %}
+        <p>No documents.</p>
+    {% endif %}
+
+    </body>
+</html> 

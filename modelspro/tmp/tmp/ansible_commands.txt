@@ -1,0 +1,15 @@
+ansible centos -i ./inventory -m ping
+
+ansible centos -i ./inventory -m command -a "/bin/echo 123"
+
+sudo ansible-playbook test2.yml -i ./inventory  -v 
+
+sudo ansible-playbook test1.yml -i ./inventory 
+
+sudo ansible-playbook test11.yml -i ./inventory
+
+sudo ansible-playbook test111.yml -i ./inventory1
+
+sudo ansible-playbook test12.yml -i inventory1
+
+sudo ansible-playbook test112.yml -i ./inventory1

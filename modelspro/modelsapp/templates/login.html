@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+header {
+    background-color:#FF9103;
+    color:white;
+    text-align:center;
+    padding:5px;
+    border: 2px solid #a1a1a1;	 
+}
+nav {
+    border: 2px solid #FF9103;
+    line-height:30px;
+    background-color:#eeeeee;
+    height:500px;
+    width:300px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    border: 2px solid #FF9103;
+    height:500px;
+    background-color:#E3E3E3;    
+    padding:5px;    	 	 
+}
+footer {
+    border: 2px solid #a1a1a1;
+    background-color:#FF9103;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+.table_border tr td{
+	border: 1px solid #003300;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Web Contacts</h2>
+</header>
+
+<nav>
+<table width="100%" border="0" cellpadding="2" class="table_border">
+<tr><td><a href="/Contacts/admin/esearchform">Contact Search</a></td></tr>
+<tr><td><a href="/Contacts/admin/contactform">Add Contact</a></td></tr>
+<tr><td><a href="/Contacts/admin/jobtitleform">JobTitle Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/departmentform">Department Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/supervisorform">Supervisor Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/editsearchform">Edit Contact</a></td></tr>
+<tr><td><a href="/Contacts/admin/deletesearchform">Delete Contact</a></td></tr>
+<tr><td><a href="/Contacts/logout">Logout</a></li></td></tr>
+</table>
+</nav>
+
+<section>
+<form action="/Contacts/adminindex/" method="post">{% csrf_token %}
+    	<center><table summary="Form to get login details." border="1">
+            <tr><td>Login Name :</td><td><input name="username" type="text"></td></tr>
+            <tr><td>Password :</td><td><input name="password" type="password">
+            </td></tr>
+            <tr><td>&nbsp;</td><td><input type="submit" value="Login"></td></tr>
+        </table></center>
+    </form>
+</section>
+
+<footer>
+Copyright © webcontacts
+</footer>
+
+</body>
+</html>

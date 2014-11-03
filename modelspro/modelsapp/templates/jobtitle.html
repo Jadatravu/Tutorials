@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <title>Job Title form</title>
+<style>
+header {
+    background-color:#FF9103;
+    color:white;
+    text-align:center;
+    padding:5px;
+    border: 2px solid #a1a1a1;	 
+}
+nav {
+    border: 2px solid #FF9103;
+    line-height:30px;
+    background-color:#eeeeee;
+    height:500px;
+    width:300px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    border: 2px solid #FF9103;
+    height:500px;
+    background-color:#E3E3E3;    
+    padding:5px;       	 	 
+}
+section0 {
+    width:250px;
+    float:left;
+    padding:5px;
+    	 	 
+}
+section1 {
+    width:500px;
+    float:left;
+    padding:5px;    	 	 
+}
+footer {
+    border: 2px solid #a1a1a1;
+    background-color:#FF9103;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+.table_border tr td{
+	border: 1px solid #003300;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Web Contacts</h2>
+</header>
+
+<nav>
+<table width="100%" border="0" cellpadding="2" class="table_border">
+{% if user.is_superuser %}
+<tr><td><a href="/Contacts/admin/esearchform">Contact Search</a></td></tr>
+<tr><td><a href="/Contacts/admin/contactform">Add Contact</a></td></tr>
+<tr><td><a href="/Contacts/admin/jobtitleform">JobTitle Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/departmentform">Department Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/supervisorform">Supervisor Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/editsearchform">Edit Contact</a></td></tr>
+<tr><td><a href="/Contacts/admin/deletesearchform">Delete Contact</a></td></tr>
+<tr><td><a href="/Contacts/logout">Logout</a></li></td></tr>
+{% else %} 
+<tr><td><a href="/Contacts/admin/esearchform">Contact Search</a></td></tr>
+<tr><td><a href="/Contacts/logout">Logout</a></li></td></tr>
+{% endif %}
+</table>
+</nav>
+
+<section>
+<section0>
+</section0>
+<section1>
+{% if user.is_superuser %}
+    {% if jobtitle %}
+        <ul>
+        {% for document in jobtitle %}
+            <li><a>{{ document.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No title.</p>
+    {% endif %}
+
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url 'jobtitleform' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>
+                {{ form.title }}
+            </p>
+            <p><input type="submit" value="Save" /></p>
+        </form>
+{% endif %}
+<section1>
+</section>
+
+<footer>
+Copyright © webcontacts
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+header {
+    background-color:#FF9103;
+    color:white;
+    text-align:center;
+    padding:5px;
+    border: 2px solid #a1a1a1;	 
+}
+nav {
+    border: 2px solid #FF9103;
+    line-height:30px;
+    background-color:#eeeeee;
+    height:600px;
+    width:300px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    border: 2px solid #FF9103;
+    height:600px;
+    background-color:#E3E3E3;    
+    padding:5px;    	 	 
+}
+section0 {
+    width:250px;
+    float:left;
+    padding:5px;
+    	 	 
+}
+section1 {
+    width:500px;
+    float:left;
+    padding:5px;    	 	 
+}
+footer {
+    border: 2px solid #a1a1a1;
+    background-color:#FF9103;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+.table_border tr td{
+	border: 1px solid #003300;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Web Contacts</h2>
+</header>
+
+<nav>
+<table width="100%" border="0" cellpadding="2" class="table_border">
+{% if user.is_superuser %}
+<tr><td><a href="/Contacts/admin/esearchform">Contact Search</a></td></tr>
+<tr><td><a href="/Contacts/admin/contactform">Add Contact</a></td></tr>
+<tr><td><a href="/Contacts/admin/jobtitleform">JobTitle Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/departmentform">Department Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/supervisorform">Supervisor Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/editsearchform">Edit Contact</a></td></tr>
+<tr><td><a href="/Contacts/admin/deletesearchform">Delete Contact</a></td></tr>
+<tr><td><a href="/Contacts/logout">Logout</a></li></td></tr>
+{% else %} 
+<tr><td><a href="/Contacts/admin/esearchform">Contact Search</a></td></tr>
+<tr><td><a href="/Contacts/logout">Logout</a></li></td></tr>
+{% endif %}
+</table>
+</nav>
+
+<section>
+<section0>
+</section0>
+<section1>
+{% if user.is_superuser %}
+<form action="{% url 'contactform' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <a><bold>Contact details form </bold></a>
+            <table><tr><td></td><td>{{form.c_id.as_hidden}}</td></tr>
+            <tr><td></td><td>{{form.old_pic.as_hidden}}</td></tr>
+            <tr> <td> FirstName</td><td>{{ form.first_name }} </td></tr>
+            <tr><td>LastName</td><td>{{ form.last_name }}</td></tr>
+            <tr><td> Surname </td><td>{{ form.sur_name }}</td></tr>
+            <tr><td> Email </td><td>{{ form.email }}</td></tr>
+            <tr><td>Employee ID </td><td>{{ form.emp_id }}</td></tr>
+            <tr><td> Phone </td><td>{{ form.phone }}</td></tr>
+            <tr><td>Address</td><td> </td></tr> 
+            <tr><td>House No</td><td>{{ form.H_No }}</td></tr>
+            <tr><td>Line No</td><td>{{ form.Line1 }}</td></tr>
+            <tr><td>Street</td><td>{{ form.street }}</td></tr>
+            <tr><td>Colony</td><td>{{ form.colony }}</td></tr>
+            <tr><td>City</td><td>{{ form.city }}</td></tr>
+            <tr><td>Pin</td><td>{{ form.pin }}</td></tr>
+            <tr><td>Supervisor ID</td><td>
+            <select name="supervisor">
+                {% for sup in supervisors %}
+                     {% if sup.sup_id == supervisor_id %}
+                         <option value="{{sup.sup_id}}" selected="selected">{{sup.sup_id}}</option>
+                     {% else %}
+                         <option value="{{sup.sup_id}}">{{sup.sup_id}}</option>
+                     {% endif %}
+                {% endfor %}
+            </select></td></tr>
+            <tr><td>JobTitle</td><td>
+            <select name="title">
+                 {% for tit in jobtitle %}
+                     {% if tit.title == jobtitle_name %}
+                         <option value="{{tit.title}}" selected="selected">{{tit.title}}</option>
+                     {% else %}
+                         <option value="{{tit.title}}">{{tit.title}}</option>
+                     {% endif %}
+                 {% endfor %}
+            </select></td></tr>
+            <tr><td>Department</td><td>
+            <select name="department">
+                 {% for dep in department %}
+                     {% if dep.dep_name == department_name %}
+                        <option value="{{dep.dep_name}}" selected="selected">{{dep.dep_name}}</option>
+                     {% else %}
+                        <option value="{{dep.dep_name}}" >{{dep.dep_name}}</option>
+                     {% endif %}
+                 {% endfor %}
+            </select></td></tr>
+            <tr><td>{{ form.picture.label_tag }}</td><td>{{ form.picture }}</td></tr>
+            </table>
+            <p>{{ form.non_field_errors }}</p>
+            <p>
+                {{ form.picture.errors }}
+            </p>
+            <p>
+            </p>
+            <p><input type="submit" value="Save" /></p>
+        </form>
+{% endif %}
+</section1>
+</section>
+
+<footer>
+Copyright © webcontacts
+</footer>
+
+</body>
+</html>

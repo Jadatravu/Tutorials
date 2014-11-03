@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+header {
+    background-color:#FF9103;
+    color:white;
+    text-align:center;
+    padding:5px;
+    border: 2px solid #a1a1a1;	 
+}
+nav {
+    border: 2px solid #FF9103;
+    line-height:30px;
+    background-color:#eeeeee;
+    height:550px;
+    width:300px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    border: 2px solid #FF9103;
+    height:550px;
+    background-color:#E3E3E3;    
+    padding:5px;       	 	 
+}
+section0 {
+    width:250px;
+    float:left;
+    padding:5px;
+    	 	 
+}
+section1 {
+    width:500px;
+    float:left;
+    padding:5px;    	 	 
+}
+footer {
+    border: 2px solid #a1a1a1;
+    background-color:#FF9103;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+.table_border tr td{
+	border: 1px solid #003300;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Web Contacts</h2>
+</header>
+
+<nav>
+<table width="100%" border="0" cellpadding="2" class="table_border">
+{% if user.is_superuser %}
+<tr><td><a href="/Contacts/admin/esearchform">Contact Search</a></td></tr>
+<tr><td><a href="/Contacts/admin/contactform">Add Contact</a></td></tr>
+<tr><td><a href="/Contacts/admin/jobtitleform">JobTitle Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/departmentform">Department Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/supervisorform">Supervisor Add Form</a></td></tr>
+<tr><td><a href="/Contacts/admin/editsearchform">Edit Contact</a></td></tr>
+<tr><td><a href="/Contacts/admin/deletesearchform">Delete Contact</a></td></tr>
+<tr><td><a href="/Contacts/logout">Logout</a></li></td></tr>
+{% else %} 
+<tr><td><a href="/Contacts/admin/esearchform">Contact Search</a></td></tr>
+<tr><td><a href="/Contacts/logout">Logout</a></li></td></tr>
+{% endif %}
+</table>
+</nav>
+<section>
+<section0>
+</section0>
+<section1>
+<a>Search Contact</a>
+<p>
+<a> To Search Contact in the web contacts<a>
+</p>
+{% if user.is_superuser %}
+<a>Add Contact</a>
+<p>
+<a> To Add Contact to the web contacts<a>
+</p>
+<a>JobTitle Add</a>
+<p>
+<a> To Add JobTitle in the web contacts<a>
+</p>
+<a>Department Add</a>
+<p>
+<a> To Add Department in the web contacts<a>
+</p>
+<a>Supervisor Add</a>
+<p>
+<a> To Add Supervisor Contact in the web contacts<a>
+</p>
+<a>Edit Contact</a>
+<p>
+<a> To Edit Contact in the web contacts<a>
+</p>
+<a>Delete Contact</a>
+<p>
+<a> To delete Contact from the web contacts<a>
+</p>
+{% endif %}
+</section1>
+</section>
+<footer>
+Copyright © webcontacts
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+adding a app view
+1. create urls.py in app dir
+2. add urlpatterns in app urls.py
+3. add url pattern in site urls.py

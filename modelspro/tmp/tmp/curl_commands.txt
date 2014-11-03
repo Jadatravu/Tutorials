@@ -1,0 +1,7 @@
+curl -u "user:password" -F "video=./sample.png"   http://127.0.0.1:8000/api/v1/mymodel/ -v -H "Content-Type: multipart/form-data"
+
+curl -u "user:password" -F "video=@./sample.png"   http://127.0.0.1:8000/api/v1/mymodel/ -v -H "Content-Type: multipart/form-data" 
+
+http://localhost:8000/api/v1/mymodel/?format=json
+
+curl -u "user:password" -d '{"y": "1", "x": "1"}'   http://127.0.0.1:8000/api/v1/mymodel1/ -v -H "Content-Type: application/json"
