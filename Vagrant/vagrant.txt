@@ -1,0 +1,40 @@
+0. vagrant(1.6.5),virtualbox(4.3.16) are to be installed.
+
+1. To check the version of the vagrant
+vagrant -v
+
+2. check the available vagrant images in the url
+
+https://vagrantcloud.com/
+https://vagrantcloud.com/discover/featured
+
+3. Add the image name listed in the above url to the vagrant/virtualbox
+vagrant box add ubuntu/trusty64
+
+4.Initialize the image, this will create Vagrantfile in the current working directory
+vagrant init ubuntu/trusty64
+
+5.Up the vagrant VM
+vagrant up
+
+5a.To check the available VMs
+vagrant box list
+
+6.SSH to the VM,play inside VM
+vagrant ssh
+
+7.exit from the VM
+
+8.Reload the VM
+vagrant reload
+
+9.Connect to the VM using the ssh
+
+10.vagrant ssh
+
+play in the VM :)
+
+Note: While VM is up and running check the vm is up and running in the Virtualbox UI
+
+Edit Vagrantfile to enable public network 'config.vm.network "public_network"'
+
