@@ -40,15 +40,18 @@ Edit Vagrantfile to enable public network 'config.vm.network "public_network"'
 
 12. Packaging the modified VM
 
-[root@buildserver vagrant]# VBoxManage list vms "vagrant_default_1413801015351_30090" {94cbb97c-3dab-4c9d-9254-59f61d56b37d}
+[root@buildserver vagrant]# VBoxManage list vms 
+"vagrant_default_1413801015351_30090" {94cbb97c-3dab-4c9d-9254-59f61d56b37d}
 "docker-host-23ca11b31e6b44404acf1eeff99862db2a89c115c0b091065411840aab0e8f6b" {58783ec5-9999-4efe-8aa2-fa8a0f6fa0b5}
 "docker-host-45934e17026ca588eae2bdeea07d384c394beba0877456de4b63c649dc25138d" {51d28f58-8cdf-4c46-96d1-bcf70f36b757}
 "docker-host-5dceb1e57743dc953a22da3da3ee4457a2f44b5b71cedd0761698323e5d30ad3" {75e42418-75e6-4c04-8d6a-5b49360013af}
 "precise64_default_1418130007870_55258" {7e9b518d-4dd9-4a31-b512-c349feb2d1f2}
 "trusty64_default_1418130978046_48127" {402a9ea9-0b54-4666-8b0d-64e473027890}
 
-[root@buildserver precise64]# vagrant package --base hashicorp/precise64 ==> hashicorp/precise64: VM not created. Moving on...
-[root@buildserver precise64]# vagrant package --base my-virtual-machine ==> my-virtual-machine: VM not created. Moving on...
+[root@buildserver precise64]# vagrant package --base hashicorp/precise64 
+==> hashicorp/precise64: VM not created. Moving on...
+[root@buildserver precise64]# vagrant package --base my-virtual-machine 
+==> my-virtual-machine: VM not created. Moving on...
 [root@buildserver precise64]# vagrant package --base precise64_default_1418130007870_55258
 ==> precise64_default_1418130007870_55258: Clearing any previously set forwarded ports...
 ==> precise64_default_1418130007870_55258: Exporting VM...
