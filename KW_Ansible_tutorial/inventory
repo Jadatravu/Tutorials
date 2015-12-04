@@ -1,0 +1,4 @@
+[iicbuildsrv5]
+10.221.57.5 ansible_ssh_user=root ansible_ssh_pass=fireexit123$ ansible_sudo_pass=fireexit123$
+[iicbuildsrv38]
+10.221.57.38 ansible_ssh_user=root ansible_ssh_pass=fireexit123$ ansible_sudo_pass=fireexit123$

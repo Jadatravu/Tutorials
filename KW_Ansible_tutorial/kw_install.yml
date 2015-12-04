@@ -1,0 +1,21 @@
+- hosts: iicbuildsrv38
+  tasks:
+    - name: add user to the system
+      user: name=si comment="CSI user"
+    - file: create common directory 
+      file: path=/usr/local/share/kwdesktop/ state=directory mode=0755
+    - file: create kwdesktop directory 
+      file: path=/home/si/kwdesktop/ state=directory mode=0755
+    - copy: copy kw_install.sh file to the local
+      copy: src=/home/user/kwdesktop_files/kw_install.sh dest=/usr/local/share/kwdesktop/kw_install.sh
+    - copy: copy kwcheck_create_wr.sh file to the local
+      copy: src=/home/user/kwdesktop_files/kwcheck_create_wr.sh dest=/usr/local/share/kwdesktop/kwcheck_create_wr.sh
+    - copy: copy kw_check_run_wr.sh file to the local
+      copy: src=/home/user/kwdesktop_files/kw_check_run_wr.sh dest=/usr/local/share/kwdesktop/kw_check_run_wr.sh
+    - copy: copy kwshell_wr.sh file to the local
+      copy: src=/home/user/kwdesktop_files/kwshell_wr.sh dest=/usr/local/share/kwdesktop/kwshell_wr.sh
+    - copy: copy kw-insight-cmd-installer.linux.sh file to the local
+      copy: src=/home/user/kwdesktop_files/kw-insight-cmd-installer.linux.sh dest=/usr/local/share/kwdesktop/kw-insight-cmd-installer.linux.sh
+    - script: /home/user/kwdesktop_files/kw_install.sh > /home/si/test_install.log 
+      register: result
+    - debug: echo "{{ result.stdout }}"
