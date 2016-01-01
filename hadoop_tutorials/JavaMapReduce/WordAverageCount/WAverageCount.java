@@ -30,7 +30,8 @@ public class WAverageCount extends Configured implements Tool{
 	    conf.setMapOutputValueClass(IntWritable.class);
 
 	    conf.setOutputKeyClass(Text.class);
-	    conf.setOutputValueClass(IntWritable.class);
+	    //conf.setOutputValueClass(IntWritable.class);
+	    conf.setOutputValueClass(DoubleWritable.class);
 	    
 	    JobClient.runJob(conf); /* Initiates job to the JobTracker */
 	    return 0;
