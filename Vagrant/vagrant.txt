@@ -101,3 +101,53 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Mounting shared folders...
     default: /vagrant => /root/Desktop/vagrant/packaged_precise64
 
+[root@buildserver ~]# vagrant global-status
+id       name    provider   state    directory
+------------------------------------------------------------------------------
+72d8a82  default virtualbox poweroff /root/Desktop/vagrant
+f4e631b  default virtualbox running  /root/Desktop/vagrant/precise64
+8440f6d  default virtualbox running  /root/Desktop/vagrant/trusty64
+3312539  default virtualbox running  /root/Desktop/vagrant/packaged_precise64
+[root@buildserver ~]# vagrant up 3312539
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 => 2222 (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection timeout. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 4.2.0
+    default: VirtualBox Version: 4.3
+==> default: Mounting shared folders...
+    default: /vagrant => /root/Desktop/vagrant/packaged_precise64
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: to force provisioning. Provisioners marked to run always will still run.
+[root@buildserver ~]# vagrant ssh 3312539
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+New release '14.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Welcome to your Vagrant-built virtual machine.
+Last login: Thu Dec 10 08:50:29 2015 from 10.0.2.2
+vagrant@precise64:~$ logout
+Connection to 127.0.0.1 closed.
+[root@buildserver ~]#
+
+
