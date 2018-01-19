@@ -13,11 +13,11 @@ def get_name_dict():
     with open("p022_names.txt",'r') as fo: 
          lines = fo.readlines()
          l_ines = lines[0].split(',')
+         l_ines=sorted(l_ines)
          count = 0
          for name in l_ines:
             names_dict[count] = name.strip('\"')
             count =count + 1
-        # print names_dict
     return names_dict
 
 
@@ -38,7 +38,7 @@ def main():
     total_value = 0
     for key,value in names_dict.iteritems():
         c_value = cal_values(names_dict,key)
-        total_value = total_value + c_value*key
+        total_value = total_value + c_value*(key+1)
     print total_value 
 
 if __name__ == "__main__":
