@@ -20,7 +20,7 @@ def main():
    #valid_comb = filter(check_valid_combination, range(123456789,9876543210))
    #approach 2
    count = 1 
-   num = 1234567890 
+   num = 1023456789 
    while True:
       num = num+1
       if num > 9876543210:
