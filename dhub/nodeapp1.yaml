@@ -1,0 +1,33 @@
+#working
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeapp
+spec:
+  ports:
+  - port: 8081
+  selector:
+    app: nodeapp
+  clusterIP: None
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: nodeapp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nodeapp
+    spec:
+      containers:
+      - name: nodeapp
+        image: jadatravu/nodeapp
+        ports:
+        - containerPort: 8081
+          hostPort: 8081
+        command:
+         - "node"
+         - "/root/nodeapp/app.js"
+

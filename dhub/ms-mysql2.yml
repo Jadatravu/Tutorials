@@ -1,0 +1,33 @@
+#working
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-mysql
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: ms-mysql
+  clusterIP: None
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ms-mysql-deploy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ms-mysql
+    spec:
+      containers:
+      - name: ms-mysql
+        image: jadatravu/mservice-ms-mysql
+        ports:
+        - containerPort: 3306
+          hostPort: 3306
+        command:
+         - "/bin/bash"
+         - "/root/start.sh"
+

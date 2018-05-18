@@ -1,0 +1,33 @@
+#working
+apiVersion: v1
+kind: Service
+metadata:
+  name: fapp
+spec:
+  ports:
+  - port: 9000
+  selector:
+    app: fapp
+  clusterIP: None
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: fapp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: fapp
+    spec:
+      containers:
+      - name: fapp
+        image: jadatravu/mservice-dapp
+        ports:
+        - containerPort: 9000
+          hostPort: 9000
+        command:
+         - "/bin/bash"
+         - "/root/fapp/start.sh"
+

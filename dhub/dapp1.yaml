@@ -1,0 +1,21 @@
+#working
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: dapp
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dapp
+    spec:
+      containers:
+      - name: dapp
+        image: jadatravu/mservice-dapp
+        ports:
+        - containerPort: 8000
+          hostPort: 8000
+        command:
+         - "/bin/bash"
+         - "/root/gproject/start.sh"
