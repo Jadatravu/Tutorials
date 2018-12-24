@@ -1,0 +1,55 @@
+Statistics:
+    1. Descriptive Statistics
+        Summerizes the data
+    2. Inference Statistics
+        does a sampling, performs descriptive statistic analysis and infers the results on whole data
+        
+1.Descriptice Statistics.
+    Is a Summary  Statiscics that summarizes or describe features of collection of information
+    1.1 Measures of central tendency
+        A) MEAN B) MEDIAN C) MODE
+    1.2 Measures of Despertion
+        A) RANGE B) VARIANCE C) STANDARD DEVIATION D) QUARTILES E)PERCENTILES
+    1.3 Measures of Asymmetry
+        A) SKEWNESS 
+        B) KURTOSIS
+    1.4 MEASURES OF RELATION SHIP
+        A) COVARIANCE
+        B) CORRELATION 
+
+2. Inference Statistics
+    Takes samples of whole collection of data and does analysis and infer results of analysis on whole data
+    2.1 Hypothesis Testing
+        A hypothesis test is rule that specifies whether to accept or reject a claim about a population depending on the evidence provided by a sample of data.
+
+1.1 Measures of central tendency
+    A. Mean
+        It is the sum of a collection of numbers divided by the number of numbers in the collection.
+    B. Median
+        The median is the value separating the higher half from the lower half of a data sample (a population or a probability distribution). 
+    C. Mode
+        The mode of a set of data values is the value that appears most often
+
+1.2 Measures of Despertion
+    A. Range
+         The range of a set of data is the difference between the largest and smallest values
+    B. Variance
+         It is a squared deviation of a random variable from its mean, and it informally measures how far a set of (random) numbers are spread out from their mean
+    C. Standard Deviation
+        The standard deviation is a measure that is used to quantify the amount of variation of a set of data values. A low standard deviation indicates that the data points tend to be close to the mean of the set, while a high standard deviation indicates that the data points are spread out over a wider range of values
+    D. Quartiles
+        The first quartile (Q1) is defined as the middle number between the smallest number and the median of the data set. The second quartile (Q2) is the median of the data. The third quartile (Q3) is the middle value between the median and the highest value of the data set.
+    E. Percentiles
+        It is a measure used in statistics indicating the value below which a given percentage of observations in a group of observations fall.
+
+1.3 Measures of Asymmetry
+    A. Skewness
+        Skewness is a measure of the asymmetry of the probability distribution of a real-valued random variable about its mean
+    B. Kurtosis
+        It is a measure of the "tailedness" of the probability distribution of a real-valued random variable
+        
+1.4 MEASURES OF RELATION SHIP
+    A) COVARIANCE
+        It is a measure of the joint variability of two random variables
+    B) CORRELATION 
+        It is a single number that describes the degree of relationship between two variables
