@@ -1,4 +1,7 @@
-Hypothesis Testing.
+
+***************************************************************************************************
+                                              Hypothesis Testing.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 1. Write the null hypothesis H0 and alternate hypothesis Ha; then identify the claim and decide whether the
 test is left-tailed, right-tailed, or two-tailed.
@@ -10,7 +13,7 @@ left-tailed test: P = (Area in left tail)
 right-tailed test: P = (Area in right tail)
 two-tailed test: P = 2(Area in tail of test statistic)
 6. Make a decision to reject H0 or fail to reject H0.
-If P = a, then reject H0
+If P <= a, then reject H0
 If P > a, then fail to reject H0
 7. Interpret the decision in the context of the original claim
 
