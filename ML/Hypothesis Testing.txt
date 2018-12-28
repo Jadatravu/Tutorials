@@ -1,0 +1,60 @@
+Hypothesis Testing.
+
+1. Write the null hypothesis H0 and alternate hypothesis Ha; then identify the claim and decide whether the
+test is left-tailed, right-tailed, or two-tailed.
+2. Identify the level of significance, a.
+3. Determine the standardized test statistic z.
+4. Find the area that corresponds to z (as before - use Table).
+5. Find the P-value.
+left-tailed test: P = (Area in left tail)
+right-tailed test: P = (Area in right tail)
+two-tailed test: P = 2(Area in tail of test statistic)
+6. Make a decision to reject H0 or fail to reject H0.
+If P = a, then reject H0
+If P > a, then fail to reject H0
+7. Interpret the decision in the context of the original claim
+
+Example 1:
+----------
+The percentage of all women with gray hair is 25%.
+H0 = 25%
+HA != 25%
+alpha = 0.05
+
+Sample of 100 women had 20% with gray Hair.
+
+The standard error for your sample percentage is the square root of p(1-p)/n which equals 0.04 or 4%. 
+You find the test statistic by taking the proportion in the sample with gray hair
+z= (0.20-0.25)/sqrt(0.20*(1-0.20)/100) 
+ = -0.05/0.04
+ = -1.25
+
+p = 2*0.1056 ( as it is a two sided scenario )
+  = 0.2112
+Here p is lesser than alpha hence we will reject the H0
+
+Example 2:
+----------
+A business knows that 30% of its customers are less than 25 years old. 
+The business wants to increase this percentage, 
+After the campaign, the business obtained a random sample of 50 customers and found that 18 of those sampled were less than 25 years old.
+H0 = 30%
+HA > 30%
+mean 18/50 = 0.36
+
+z= (0.36-0.30)/sqrt(0.30*(1-0.30)/50) 
+ = 0.06/0.0648
+ = 0.9259
+
+P = 0.1711
+P > alpha, we failed to reject H0
+
+References:
+http://math.mercyhurst.edu/~griff/courses/m109/Lectures/sect7.2.pdf
+https://faculty.elgin.edu/dkernler/statistics/ch07/normal_table.pdf
+https://support.minitab.com/en-us/minitab-express/1/help-and-how-to/basic-statistics/inference/supporting-topics/basics/example-of-a-hypothesis-test/
+https://www.khanacademy.org/math/ap-statistics/tests-significance-ap/one-sample-z-test-proportion/v/calculating-p-value-from-z-table
+https://faculty.elgin.edu/dkernler/statistics/ch07/7-2.html
+
+
+
