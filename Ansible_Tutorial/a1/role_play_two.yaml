@@ -1,0 +1,6 @@
+---
+   - name: one
+     hosts: ab
+     become: yes
+     roles:
+        - second

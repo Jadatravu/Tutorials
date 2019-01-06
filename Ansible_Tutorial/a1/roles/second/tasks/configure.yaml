@@ -1,0 +1,5 @@
+---
+   - name: install apache2
+     copy: src="files/second.html" dest="/var/www/html/second.html"
+     notify: restart apache2
+        

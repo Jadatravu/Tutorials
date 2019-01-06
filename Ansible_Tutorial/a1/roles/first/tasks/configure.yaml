@@ -1,0 +1,2 @@
+- name: copy html
+  copy: src=files/first.html dest=/var/www/html/first.html

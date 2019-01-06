@@ -1,0 +1,128 @@
+    1  cd a1/
+    2  vi inventory 
+    3  vi t1.yaml
+    4  ansible-playbook t1.yaml 
+    5  vi t1.yaml
+    6  ansible-playbook t1.yaml 
+    7  vi t1.yaml
+    8  ansible-playbook t1.yaml 
+    9  vi t1.yaml
+   10  ansible-playbook t1.yaml 
+   11  vi t1.yaml
+   12  ansible-playbook t1.yaml 
+   13  vi t1.yaml
+   14  ansible-playbook t1.yaml 
+   15  ping U1
+   16  ifconfig
+   17  sudo vi /etc/hosts
+   18  ping U1
+   19  ansible-playbook t1.yaml 
+   20  sudo ansible-playbook t1.yaml 
+   21  ping U1
+   22  sudo ansible-playbook t1.yaml  -vvvv
+   23  ansible-playbook t1.yaml 
+   24  vi t1.yaml 
+   25  ansible-playbook t1.yaml 
+   26  vi t1.yaml 
+   27  ansible-playbook t1.yaml 
+   28  ansible-playbook t1.yaml --ansible-sudo-pass
+   29  cd a1
+   30  ls
+   31  vi t1.yaml 
+   32  vi t2.yaml
+   33  ansible-playbook t2.yaml 
+   34  vi t2.yaml
+   35  ansible-playbook t2.yaml --syntax-check
+   36  vi t2.yaml
+   37  ansible-playbook t2.yaml --syntax-check
+   38  vi t1.yaml 
+   39  vi t2.yaml
+   40  ansible-playbook t2.yaml --syntax-check
+   41  vi t1.yaml 
+   42  vi t2.yaml
+   43  ansible-playbook t2.yaml --syntax-check
+   44  vi t1.yaml 
+   45  vi t2.yaml
+   46  ansible-playbook t2.yaml --syntax-check
+   47  vi t1.yaml 
+   48  vi t2.yaml
+   49  ansible-playbook t2.yaml --syntax-check
+   50  vi t2.yaml
+   51  ansible-playbook -i inventory t2.yaml 
+   52  vi inventory 
+   53  ansible-playbook -i inventory t2.yaml 
+   54  ping u1
+   55  ping u2
+   56  vi inventory 
+   57  ansible-playbook -i inventory t2.yaml 
+   58  ansible-playbook -i inventory t2.yaml -vvvv
+   59  ssh ubuntu@U1
+   60  ssh ubuntu@U2
+   61  vi t2.yaml
+   62  ansible-playbook -i inventory t2.yaml -vvvv
+   63  vi inventory 
+   64  ansible-doc -i | more
+   65  ansible-doc -l | more
+   66  vi inventory 
+   67  ansible-playbook -i inventory t2.yaml -vvvv
+   68  sudo apt-get install sshpass
+   69  ansible-playbook -i inventory t2.yaml -vvvv
+   70  cd a1/
+   71  vi inventory 
+   72  vi /etc/hosts
+   73  ls
+   74  vi t3.yaml 
+   75  vi t2.yaml 
+   76  vi t1.yaml 
+   77  grep notify *
+   78  vi t21.yaml 
+   79  ifconfig
+   80  cd a1/roles/
+   81  ansible-galaxy init second --offline
+   82  cd second/
+   83  vi tasks/main.yml 
+   84  vi tasks/install.yml
+   85  cd tasks/
+   86  cp install.yml configure.yaml
+   87  cp install.yml service.yaml
+   88  vi service.yaml 
+   89  vi configure.yaml 
+   90  vi ../handlers/main.yml 
+   91  cd ../../../
+   92  ls
+   93  cat role_play.yaml 
+   94  :q!
+   95  cp role_play.yaml role_play_one.yaml 
+   96  cp role_play.yaml role_play_two.yaml 
+   97  vi role_play_two.yaml 
+   98  ansible-playbook -i inventory role_play_two.yaml 
+   99  vi roles/second/tasks/main.yml 
+  100  ansible-playbook -i inventory role_play_two.yaml 
+  101  vi roles/second/tasks/install.yml 
+  102  vi roles/second/tasks/main.yml 
+  103  ansible-playbook -i inventory role_play_two.yaml 
+  104  ls ./roles/second/tasks/
+  105  vi roles/second/tasks/main.yml 
+  106  ansible-playbook -i inventory role_play_two.yaml 
+  107  vi roles/second/tasks/main.yml 
+  108  ansible-playbook -i inventory role_play_two.yaml 
+  109  echo "<h2> hello </h2>" > roles/second/files/second.html
+  110  ansible-playbook -i inventory role_play_two.yaml 
+  111  vi roles/second/tasks/service.yaml 
+  112  ansible-playbook -i inventory role_play_two.yaml 
+  113  cd a1/roles/first/
+  114  vi tasks/main.yml 
+  115  sudo halt
+  116  ls
+  117  ls a1
+  118  cd roles
+  119  cd a1/roles/
+  120  ls
+  121  vi first/
+  122  cd first/
+  123  ls
+  124  cd ../
+  125  sudo apt-get install git
+  126  ls
+  127  vi first/
+  128  history > one.txt

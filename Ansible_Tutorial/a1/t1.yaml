@@ -1,0 +1,9 @@
+---
+
+  - name: Provision Vagrant
+    hosts: abc
+    tasks:
+
+      - name: Install the Git package
+        become: yes
+        apt: name=git state=present

@@ -1,0 +1,7 @@
+[abc]
+
+U1     ansible_connection=ssh        ansible_user=ubuntu	ansible_password=Python@123	ansible_become_pass=Python@123
+U2     ansible_connection=ssh        ansible_user=ubuntu	ansible_password=Python@123	ansible_become_pass=Python@123
+
+[ab]
+U2     ansible_connection=ssh        ansible_user=ubuntu	ansible_password=Python@123	ansible_become_pass=Python@123

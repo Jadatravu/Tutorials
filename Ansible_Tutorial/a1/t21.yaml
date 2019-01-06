@@ -1,0 +1,26 @@
+---
+   - name: O1
+     hosts: abc
+     become: yes
+     vars:
+        package1: apache2
+     tasks:
+       - name: one
+         command: "echo \"Helloworld\""
+       - name: apt-get update
+         command: "apt-get update"
+       - name: install packages
+         apt: package="{{item}}" state=present
+         with_items:
+            - "{{ package1 }}"
+       - name: files0
+         file: path="/tmp/one2" state=absent mode=777
+       - name: files
+         file: path="/tmp/one2" state=directory mode=777
+         notify: 
+            - start services
+     handlers: 
+       - name: start services
+         service: name="{{item}}" state=restarted
+         with_items:
+            - "{{ package1 }}"

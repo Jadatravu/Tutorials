@@ -1,0 +1,17 @@
+---
+   - name: O1
+     hosts: abc
+     become: yes
+     tasks:
+      - name: hello
+        command: "echo \"hello\""
+
+      - name: world 
+        shell: "echo {{ item }}"
+        loop:
+          - "one"
+          - "two"
+
+      - apt:  name={{item}} state=present
+        loop:
+          - "apache2"

@@ -1,0 +1,15 @@
+---
+   - name: O1
+     hosts: abc
+     become: yes
+     tasks:
+       - name: one
+         command: "echo \"Helloworld\""
+       - name: apt-get update
+         command: "apt-get update"
+       - name: install apache2
+         apt: package=apache2 state=present
+       - name: start apache2
+         service: name=apache2 state=restarted
+       - name: create directory
+         file: path=/tmp/one state=directory mode=777
