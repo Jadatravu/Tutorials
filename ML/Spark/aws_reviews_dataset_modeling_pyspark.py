@@ -76,7 +76,6 @@ model = ppl.fit(dfe2_train)
 #Saving the trained model
 model.write().overwrite().save("./aws_rw_watches_model")
 
-print(dir(model))
 class_res_pred = model.transform(dfe2_test)
 #class_res_pred.select("prediction").coalesce(1).write.format("text").option("header", "false").mode("append").save("output.txt")
 class_res_pred.select("prediction").write.save("output.txt")
