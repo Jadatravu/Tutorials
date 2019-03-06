@@ -1,0 +1,8 @@
+- hosts: localhost
+  tasks:
+    - name: Create a github Repo
+      github_repo:
+        name: "Hello4"
+        description: "This is your first repository"
+        userid: "generator2"
+        passwd: "xxxxxx"
