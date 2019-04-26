@@ -9,8 +9,8 @@ object SimpleApp {
   def main(args: Array[String]) {
     val logFile = "README.md" // Should be some file on your system
     val conf = new SparkConf().setAppName("Simple Application")
-    conf.set("spark.neo4j.bolt.url","bolt://10.103.6.207:7687")
-    conf.set("spark.neo4j.bolt.password","neo4j1")
+    conf.set("spark.neo4j.bolt.url","bolt://xx.xx.xx.xx:7687")
+    conf.set("spark.neo4j.bolt.password","xxxx")
     val sc = new SparkContext(conf)
     val neo = Neo4j(sc)
     var match_str="MATCH (people:Person)  WHERE people.born = 1978 RETURN people.name LIMIT 10"
