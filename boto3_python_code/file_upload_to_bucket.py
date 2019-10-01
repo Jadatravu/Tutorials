@@ -1,3 +1,4 @@
+
 import boto3
 import os
 client = boto3.client(
@@ -17,4 +18,10 @@ filename = 'file.txt'
 bucket_name = 'first-devops-bucket'
 
 client.upload_file(filename, bucket_name, filename)
+
+#downloading file
+local_file_name = "local_file.txt"
+remote_file_name = "remote_file.txt"
+
+client.download_file(bucket_name, remote_file_name, local_file_name)
 
