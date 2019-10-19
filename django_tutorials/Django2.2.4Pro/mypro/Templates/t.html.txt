@@ -1,0 +1,24 @@
+<html>
+
+<head>
+XXX Technologies</br>
+Hyderabad</br>
+</br>
+</br>
+</br>
+
+sub: Experience Letter</br>
+
+<p>     Mr {{name}}  has been working with us from the {{from}} in the
+{{department}} department. His work location is {{branch_location}} Branch.
+We wish him all the best.
+</p>
+
+
+                                                (YYYY)</br>
+                                                HR Manager<br>
+Hyderabad</br>                                     
+16Oct2019</br>
+</body>
+</html>
+ 
