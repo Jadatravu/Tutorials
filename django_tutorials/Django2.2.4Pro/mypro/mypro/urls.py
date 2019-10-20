@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from myapp.views import myfunc,myfunc1,myfunc2
 from myapp1.views import form_view
-from myapp.views import c_view
+from myapp.views import c_view, h_view, h_view1
 from myapp.views import form_view as fv
 from myapp.views import form_view1 as fv1
 
@@ -30,4 +30,6 @@ urlpatterns = [
     path('formm/',fv,name='fv'),
     path('formn/',fv1,name='fv1'),
     path('cv/',c_view,name='c_view'),
+    path('hv/',h_view.as_view(),name='h_view'),
+    path('hv1/',h_view1.as_view(),name='h_view1'),
 ]

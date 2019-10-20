@@ -7,7 +7,36 @@ from django.http import HttpResponse
 
 from .forms import mform,sform
 
+from rest_framework.authentication import SessionAuthentication,\
+     BasicAuthentication,TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from rest_framework.response import Response
+#674b14e22127049984b14652e739589e39fd35fb
+class h_view(APIView):
+    authentication_classes = (SessionAuthentication, BasicAuthentication)
+    permission_classes = (IsAuthenticated,)
+    def get(self, request):
+        content = {'message': 'Hello, there!'}
+        return Response(content)
+    def post(self, request):
+        content = {'message': 'Hello, there!'}
+        return Response(content)
+    
+class h_view1(APIView):
+    authentication_classes = (SessionAuthentication, TokenAuthentication)
+    permission_classes = (IsAuthenticated,)
+    def get(self, request):
+        content = {'message': 'Hello, there one!'}
+        return Response(content)
 
+    def post(self, request):
+        var1 = request.POST['var1']
+        var2 = request.POST['var2']
+        o_1 = str(var1) + str(var2)
+        content = {'message': 'Hello, there one!'+o_1}
+        return Response(content)
+    
 def c_view(request):
     tea_name = request.GET["teacher"]
     tea_set = teacher.objects.filter(t_name = tea_name)
