@@ -1,0 +1,196 @@
+1.Installing django
+from command line "pip install django"
+
+2. checking the django installation from command line
+C:\Users\SAILA>python
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 19:29:22) [MSC v.1916 32 bit
+(Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import django
+>>> django.get_version()
+'2.2.4'
+>>>
+
+3. django is having project and applications
+Application is  a small part in the project
+
+4. creation of django project 
+p23sep\d2>django-admin.exe startproject mypro # mypro is a project name
+
+5. creation of django application.
+cd mypro
+p23sep\d2\mypro>django-admin.exe startapp myapp
+
+6. Settings.py
+a. DEBUG = True => will enable the traceback option when we are in development mode
+                => will make this value to False when we put the project in production mode
+b. ALLOWED_HOSTS => we need to place the IP address or name in the list in which we
+                    deploy the project
+
+c. INSTALLED_APPS => this will make a list of default and user defined app names
+d. TEMPLATES , DIRS => will have the folder in which we place the template files 
+e. DATABASES => will have the database configurations like engine and access credentials
+
+
+I. writing HelloWorld application
+a.write a function in myapp.views.py file
+b.link the file in the urls.py file
+c.start the development server "python ./manage.py runserver"
+d.access the url from the browser
+
+II. Adding a new model.
+a. Add the model class in the application models.py file
+b. Add the application name in the settings.py file INSTALLED_APPS section(if is not done)
+c. make migrations.. in project folder from command line 'python ./manage.py makemigrations'
+d. apply migrations . in project folder from command line 'python ./manage.py migrate'
+
+III.writing a view
+ex: http://127.0.0.1:8000/indb/?var1=fourhunderd&var2=4&var3=four
+a. in the application views.py file import the model from the model.py file if needed
+b. add the a function in the views.py file with the required logic
+   ( ex: get the input parameters from the request.GET object and create the model instance and save)
+c. return the HttpResponse with the needed message
+d. link the url to the views function in the urls.py
+e. start development server "python ./manage.py runserver" and access url from the browser
+
+IV. registering a model in the admin interface
+a. add below line inthe admin.py file in the application folder
+admin.site.register(mymodel) # here mymodel is the model name
+b. start development server "python ./manage.py runserver" and access admin url from the browser
+
+V. creating a superuser 
+a. from command line python ./manage.py createsuperuser # will prompt for username,passwd & email
+
+VI. Templates
+a. Create a templates directory "Templates" in the project folder
+b. Add the templates directory path in the TEMPLATES=> DIR in settings.py file
+c. Write a template for example t.html and place it in the "Templates" directory
+d. write a view in the app=>views.py file, import render_to_response from django.shortcuts, pass dynamic values
+   dictionary to the template
+e. link in the urls.py with the written function(view) in views.py
+f. start development server "python ./manage.py runserver" and access url fromm the browser
+
+VII. Static files
+a. create two directories inthe project folders 'sfiles' and 'dfiles'
+b. places static files like pdfs,images,videos,documents in sfiles
+c. add below settings in settings.py file
+STATIC_ROOT = os.path.join(BASE_DIR,'dfiles')
+STATICFILES_DIRS=(
+    os.path.join(BASE_DIR,'sfiles'),
+    )
+d. from command line give the command "python ./manage.py collectstatic"
+e. write a template for providing static files as mentioned in the Above Templates section
+f. start development server "python ./manage.py runserver" and access url fromm the browser
+
+VIII. Model relationships in django
+
+Basic database relations ships are 
+1.onetoone,2.onetomany,3.manytoone,4.manytomany
+
+Django support manytomany(ManytoMany) manytoone(Foriegnkey) relationships.
+a. Add models with relationships in app models.py file
+class principal(models.Model):
+     p_name = models.CharField(max_length=50)
+
+class teacher(models.Model):
+     t_name = models.CharField(max_length=50)
+
+class student(models.Model):
+     name = models.CharField(max_length=50)
+     c_lass = models.CharField(max_length=50)
+     tea = models.ManyToManyField(teacher)
+     pri = models.ForeignKey(principal)
+
+In this example principal and  student are manytoone relationship
+                student to teacher is manytomany relationship
+b.Adding prinicipal object
+   pr = principal(p_name="Ramesh")
+   pr.save()
+c.Adding teacher object
+   te1 = teacher(t_name="kiran")
+   te1.save()
+   te2 = teacher(t_name="murty")
+   te2.save()
+d. adding student object
+   s1 = student(name="hari",c_lass="1",pri=pr)
+   s1.save()
+   s1.tea.add(te1)
+   s1.save()
+   s2 = student(name="kumar",c_lass="2",pri=pr)
+   s2.save()
+   s2.tea.add(te2)
+   s2.save()
+d1. retrieving all objects
+>>> pri_set = principal.objects.all()
+>>> len(pri_set)
+1
+>>> tea_set = teacher.objects.all()
+>>> len(tea_set)
+2
+>>> st_set = student.objects.all()
+>>> len(st_set)
+2
+>>> for tea1 in tea_set:
+...    print(tea1.t_name)
+...
+Kiran
+Murty
+>>> tea1
+<teacher: teacher object (2)>
+>>> for s1 in tea1.student_set.all():
+...     print(s1.name)
+...
+kumar
+>>> s1
+<student: student object (2)>
+>>> for t1 in s1.tea.all():
+...    print(t1.t_name)
+...
+Murty
+>>> print(s1.pri.p_name)
+Ramesh
+>>>
+e. Retreiving all students objects
+   student_set = students.objects.all()
+   for stu in student_set:
+       print(stu.name)
+   student_1_set = student.objects.filter(c_lass="1")
+   for stu in student_1_set:
+       print(stu.name)
+   student_2_set = student.objects.filter(c_lass="2")
+   for stu in student_2_set:
+       print(stu.name)
+f. Accessing students objects teachers objects
+   teacher_1 = teacher.objects.get(t_name="murty")
+   students_1_set = teacher.student_set.all()
+   for st1 in students_1_set:
+       print(st1.name)
+
+IX. creating Model form.
+a. create an empty forms.py file in the app folder
+b. create a form class in the forms.py
+class m_form(ModelForm):
+    class Meta:
+        model = m_model
+        fields = ['i_d','description','code']
+c. write a view to render m_form in the views.py
+def form_view(request):
+    if request.method == 'POST':
+        form = m_form(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = m_form()
+    return render_to_response('m.html',{'form':form})
+d. link the url in the urls.py
+e. create a template m.html in the templates folder
+<html>
+<body>
+<form action='' method='POST'>
+{% csrf_token %}
+{{form.as_p}}
+<input type='submit'>
+</form>
+</body>
+</html>
+f. start the development server python ./manage.py runserver and access the url from the browser
