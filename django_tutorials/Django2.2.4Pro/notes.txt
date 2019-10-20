@@ -1,0 +1,15 @@
+https://simpleisbetterthancomplex.com/tutorial/2018/11/22/how-to-implement-token-authentication-using-django-rest-framework.html
+
+C:\Users\SAILA\Desktop\p23sep\20Oct19\Tutorials\django_tutorials\Django2.2.4Pro\
+mypro>pip install django
+Requirement already satisfied: django in c:\users\saila\appdata\roaming\python\p
+ython37\site-packages (2.2.4)
+Requirement already satisfied: pytz in c:\users\saila\appdata\roaming\python\pyt
+hon37\site-packages (from django) (2019.2)
+Requirement already satisfied: sqlparse in c:\users\saila\appdata\roaming\python
+\python37\site-packages (from django) (0.3.0)
+
+C:\Users\SAILA\Desktop\p23sep\20Oct19\Tutorials\django_tutorials\Django2.2.4Pro\
+mypro>pip install djangorestframework
+Requirement already satisfied: djangorestframework in c:\users\saila\appdata\roa
+ming\python\python37\site-packages (3.10.3)
