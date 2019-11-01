@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Employee Addition form</h3> 
+      
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "name">Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+         <label for = "department">Department</label><br>
+         <input type = "text" name = "department" placeholder = "department" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+   </body>
+</html>

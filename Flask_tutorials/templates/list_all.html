@@ -1,0 +1,14 @@
+<html>
+<head>
+<head>
+<body>
+<img src="{{ url_for('static',filename='image1.jpg') }}">
+{% for e1 in emps %}
+<h2>Hello {{e1.name}}, {{e1.department}} department</h2> 
+{% endfor %}
+
+<a href = "{{ url_for('static',filename='image1.jpg') }}">image</a>
+
+
+</body>
+</html>
